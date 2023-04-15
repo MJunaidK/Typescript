@@ -1,0 +1,27 @@
+import axios from "axios";
+
+const url = "https://jsonplaceholder.typicode.com/todos/1";
+
+interface Todo {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+axios.get(url).then((response) => {
+  const todo = response.data as Todo;
+
+  const id = todo.id;
+  const title = todo.title;
+  const completed = todo.completed;
+
+  console.log(`
+    The todo with ID: ${id}
+    Has a title of: ${title}
+    Is it finished? ${completed} 
+  `);
+});
+
+// RUN the following command
+// tsc index.ts followed by node index.js
+// OR one command for both: ts-node index.ts
