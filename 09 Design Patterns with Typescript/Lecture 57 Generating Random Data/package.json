@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "faker": "^6.6.6",
+    "parcel": "^2.8.3"
+  }
+}
